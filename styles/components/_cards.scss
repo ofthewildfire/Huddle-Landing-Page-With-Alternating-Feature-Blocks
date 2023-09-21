@@ -1,0 +1,40 @@
+@use "../_partials/" as *;
+
+.main_content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 25px;
+	margin: 5em 0;
+	padding: $ContainerPadding;
+}
+
+.card {
+	box-shadow: 0 0 5px grey;
+	border-radius: 5px;
+	width: 90%;
+	margin: 0 auto;
+	padding: $ContainerPadding;
+	background: #fff;
+	text-align: center;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 25px;
+}
+
+.card_image-container {
+	img {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 60rem) {
+	.card {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: 25px;
+		padding: 2em;
+		border: 2px solid red;
+	}
+}

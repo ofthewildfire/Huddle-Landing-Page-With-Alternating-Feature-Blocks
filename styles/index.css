@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Poppins_SemiBold";
+  src: url(/assets/fonts/Poppins-SemiBold.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans_Regular";
+  src: url(/assets/fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans_Bold";
+  src: url(/assets/fonts/OpenSans-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+@media screen and (min-width: 60rem) {
+  .header_hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+.main_header {
+  width: 90%;
+  margin: 0 auto;
+}
+.main_header .main_header-top-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_header .top-level-btn {
+  border-radius: 50px;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 0.25em 1em;
+}
+.main_header .top-level-btn:is(:hover, :focus, :active) {
+  cursor: pointer;
+  outline: 2px dashed grey;
+}
+.main_header .logo > svg {
+  transform: translateX(-25%);
+  scale: 0.65;
+}
+
+.header_hero {
+  display: grid;
+  gap: 25px;
+  padding: 1em 2em;
+}
+.header_hero .text-container > .cta-btn {
+  padding: 1em 2em;
+  background-color: hsl(322deg, 100%, 66%);
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: hsl(193deg, 100%, 96%);
+  font-weight: 700;
+  display: inline-block;
+  margin: 1em 0;
+  transition: 0.5s background-color ease-in;
+}
+.header_hero .text-container > .cta-btn:is(:hover, :focus, :active) {
+  cursor: pointer;
+  outline: 2px dashed grey;
+  background-color: hsla(322deg, 100%, 66%, 0.75);
+}
+.header_hero .image-container .image img {
+  width: 100%;
+}
+
+@media screen and (min-width: 60rem) {
+  .header_hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+.main_content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin: 5em 0;
+  padding: 1em 2em;
+}
+
+.card {
+  box-shadow: 0 0 5px grey;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 2em;
+  background: #fff;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.card_image-container img {
+  width: 50%;
+}
+
+@media screen and (min-width: 60rem) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 25px;
+    padding: 2em;
+    border: 2px solid red;
+  }
+}
+*,
+*::before,
+*::after {
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: hsl(193deg, 100%, 96%);
+}
+
+.card_title,
+.hero_title {
+  font-family: "Poppins_SemiBold", sans-serif;
+  line-height: 1.5;
+  margin: 0.5em 0;
+  color: hsl(192deg, 100%, 9%);
+}
+
+.card_text,
+.hero_text {
+  font-family: "OpenSans_Regular", sans-serif;
+  line-height: 1.5;
+  color: hsl(208deg, 11%, 55%);
+}
+
+.hero_text {
+  color: hsl(192deg, 100%, 9%);
+}/*# sourceMappingURL=index.css.map */

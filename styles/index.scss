@@ -1,0 +1,36 @@
+@use "./_partials/" as *;
+@use "./components/" as *;
+
+*,
+*::before,
+*::after {
+	border: none;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1440px;
+	margin: 0 auto;
+	background: $Very_Pale_Cyan;
+}
+
+.card_title,
+.hero_title {
+	font-family: $Poppins;
+	line-height: 1.5;
+	margin: 0.5em 0;
+	color: $Very_Dark_Cyan;
+}
+
+.card_text,
+.hero_text {
+	font-family: $Open_Sans400;
+	line-height: 1.5;
+	color: $Grayish_Blue;
+}
+
+.hero_text {
+	color: $Very_Dark_Cyan;
+}

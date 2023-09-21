@@ -1,0 +1,12 @@
+@use "./typography" as *;
+
+$Pink: hsl(322, 100%, 66%);
+$Very_Pale_Cyan: hsl(193, 100%, 96%);
+$Very_Dark_Cyan: hsl(192, 100%, 9%);
+$Grayish_Blue: hsl(208, 11%, 55%);
+
+$Poppins: "Poppins_SemiBold", sans-serif;
+$Open_Sans400: "OpenSans_Regular", sans-serif;
+$Open_Sans700: "OpenSans_Bold", sans-serif;
+
+$ContainerPadding: 1em 2em;

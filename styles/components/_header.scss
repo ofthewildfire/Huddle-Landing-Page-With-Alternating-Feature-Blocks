@@ -1,0 +1,49 @@
+@use "../_partials/" as *;
+
+.main_header {
+	width: 90%;
+	margin: 0 auto;
+
+	.main_header-top-level {
+		@include heading-flex;
+	}
+
+	.top-level-btn {
+		@include default-btn;
+		padding: 0.25em 1em;
+	}
+
+	.logo > svg {
+		// To place it near the edge.
+		transform: translateX(-25%);
+		// Not sure if this is a good idea, but, its way too big as is. So, option.
+		scale: 0.65;
+	}
+}
+
+.header_hero {
+	display: grid;
+	gap: 25px;
+	padding: $ContainerPadding;
+	.text-container {
+		> .cta-btn {
+			@include cta-btn;
+		}
+	}
+
+	.image-container {
+		.image {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 60rem) {
+	.header_hero {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+}
