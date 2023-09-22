@@ -6,6 +6,7 @@
 
 	.main_header-top-level {
 		@include heading-flex;
+		margin: 0.5em 0;
 	}
 
 	.top-level-btn {
@@ -25,6 +26,7 @@
 	display: grid;
 	gap: 25px;
 	padding: $ContainerPadding;
+	background-image: url(/assets/images/bg-hero-mobile.svg);
 	.text-container {
 		> .cta-btn {
 			@include cta-btn;
@@ -45,5 +47,6 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
+		background-image: url(/assets/images/bg-hero-desktop.svg);
 	}
 }

@@ -2,7 +2,8 @@
 
 footer {
 	background-color: $Very-Dark-Cyan;
-	padding: $ContainerPadding;
+	// padding: $ContainerPadding;
+	padding: 5em 2em;
 	color: $Very_Pale_Cyan;
 	font-family: $Open_Sans400;
 
@@ -12,7 +13,8 @@ footer {
 	}
 
 	.top-footer {
-		margin-top: 2.5em;
+		margin: 2.5em 0 1em 0;
+		// border: 2px solid red;
 	}
 }
 
@@ -55,10 +57,18 @@ footer {
 @media screen and (min-width: 60rem) {
 	.middle-footer {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+		grid-template-columns: repeat(5, 1fr);
+		.footer-cols.left {
+			grid-column: 1/ 3;
+		}
 	}
 
 	.footer-col {
 		margin: 0;
+	}
+
+	.bottom-footer {
+		margin: 1.5em 0;
 	}
 }
