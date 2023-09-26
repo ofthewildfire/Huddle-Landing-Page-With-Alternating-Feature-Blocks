@@ -19,22 +19,27 @@
 .main_header {
   width: 90%;
   margin: 0 auto;
+  padding-top: 1em;
 }
 .main_header .main_header-top-level {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
 }
 .main_header .top-level-btn {
   border-radius: 50px;
   outline: none;
   border: 2px solid transparent;
-  padding: 0.25em 1em;
+  padding: 0.25em 1.25em;
+  background-color: #fff;
+  color: hsl(192deg, 100%, 9%);
+  font-family: "Poppins_SemiBold", sans-serif;
+  font-size: clamp(0.625rem, 0.5139rem + 0.5556vw, 1rem);
 }
 .main_header .top-level-btn:is(:hover, :focus, :active) {
   cursor: pointer;
-  outline: 2px dashed grey;
+  outline: 5px dashed grey;
 }
 .main_header .logo > svg {
   transform: translateX(-25%);
@@ -46,10 +51,18 @@
   gap: 25px;
   padding: 1em 2em;
   background-image: url(/assets/images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.header_hero .text-container h1 {
+  color: hsl(192deg, 100%, 9%);
+  font-size: clamp(1.3125rem, 1.1088rem + 1.0185vw, 2rem);
+  line-height: 1.5;
 }
 .header_hero .text-container > .cta-btn {
   padding: 1em 2em;
-  background-color: hsl(322deg, 100%, 66%);
+  background-color: #b93989;
   border-radius: 50px;
   border: 2px solid transparent;
   color: hsl(193deg, 100%, 96%);
@@ -60,8 +73,8 @@
 }
 .header_hero .text-container > .cta-btn:is(:hover, :focus, :active) {
   cursor: pointer;
-  outline: 2px dashed grey;
-  background-color: hsla(322deg, 100%, 66%, 0.75);
+  outline: 5px dashed grey;
+  background-color: rgba(185, 57, 136, 0.7803921569);
 }
 .header_hero .image-container .image img {
   width: 100%;
@@ -96,8 +109,11 @@
   gap: 25px;
 }
 
+.card_image-container {
+  grid-row: 1;
+}
 .card_image-container img {
-  width: 50%;
+  width: 70%;
 }
 
 @media screen and (min-width: 60rem) {
@@ -108,10 +124,22 @@
     gap: 25px;
     padding: 2em;
   }
+  .card .card_text-container.desktop-text {
+    grid-column: 1;
+  }
+  .card .card_image-container {
+    grid-row: 1;
+  }
+  .card .card_image-container.desktop-image {
+    grid-column: 2;
+  }
+  .card .card_image-container img {
+    width: 70%;
+  }
 }
 .floating-box {
   background-color: #fff;
-  box-shadow: 0px 0px 5px hsl(208deg, 11%, 55%);
+  box-shadow: 0px 0px 5px #6c7782;
   max-width: 90%;
   margin: 0 auto;
   border-radius: 10px;
@@ -124,7 +152,7 @@
 
 .cta-btn {
   padding: 1em 2em;
-  background-color: hsl(322deg, 100%, 66%);
+  background-color: #b93989;
   border-radius: 50px;
   border: 2px solid transparent;
   color: hsl(193deg, 100%, 96%);
@@ -138,8 +166,8 @@
 }
 .cta-btn:is(:hover, :focus, :active) {
   cursor: pointer;
-  outline: 2px dashed grey;
-  background-color: hsla(322deg, 100%, 66%, 0.75);
+  outline: 5px dashed grey;
+  background-color: rgba(185, 57, 136, 0.7803921569);
 }
 
 @media screen and (min-width: 60rem) {
@@ -156,9 +184,18 @@ footer {
 footer .copyright-text {
   font-size: small;
   font-family: "OpenSans_Regular", sans-serif;
+  margin: 0 auto;
 }
 footer .top-footer {
   margin: 2.5em 0 1em 0;
+}
+footer .footer-cols.left {
+  display: grid;
+}
+
+.footer-cols .footer_container .list_item :is(:hover, :focus, :active) {
+  color: hsl(193deg, 100%, 96%);
+  border-bottom: 1px solid hsl(193deg, 100%, 96%);
 }
 
 .footer-col {
@@ -170,9 +207,32 @@ footer .top-footer {
 .footer-col .footer-col_text {
   line-height: 1.5;
 }
+.footer-col.location_footer {
+  display: grid;
+  grid-template-columns: 5% 95%;
+  align-items: start;
+}
+.footer-col.location_footer .location_icon svg {
+  display: block;
+  margin-top: 0.3rem;
+}
+.footer-col.email_footer, .footer-col.phone_footer {
+  display: grid;
+  grid-template-columns: 5% 95%;
+  align-items: center;
+}
+.footer-col.email_footer .email_icon svg,
+.footer-col.email_footer .phone_icon svg, .footer-col.phone_footer .email_icon svg,
+.footer-col.phone_footer .phone_icon svg {
+  display: block;
+}
 
 .footer_container {
   list-style-type: none;
+  margin-top: 2em;
+}
+.footer_container .list_item {
+  margin-bottom: 1em;
 }
 .footer_container .list_item a {
   text-decoration: none;
@@ -183,18 +243,26 @@ footer .top-footer {
   display: flex;
   gap: 25px;
   justify-content: center;
+  margin-top: 1.5em;
 }
 .footer_container.socials .social_item svg {
-  border: 2px solid white;
-  border-radius: 50%;
   fill: hsl(193deg, 100%, 96%);
-  padding: 0.5em;
+  transform: scale(0.75);
+}
+.footer_container.socials .social_item svg:is(:hover, :focus, :active) {
+  fill: #b93989;
+  border: none;
+}
+
+.bottom-footer {
+  margin: 2.5em 0 0 0;
+  text-align: center;
 }
 
 @media screen and (min-width: 60rem) {
   .middle-footer {
     display: grid;
-    gap: 30px;
+    gap: 50px;
     grid-template-columns: repeat(5, 1fr);
   }
   .middle-footer .footer-cols.left {
@@ -203,8 +271,21 @@ footer .top-footer {
   .footer-col {
     margin: 0;
   }
-  .bottom-footer {
-    margin: 1.5em 0;
+  .footer-cols {
+    margin: 0 auto;
+  }
+  footer .footer-cols.left {
+    display: grid;
+    gap: 15px;
+  }
+  .bottom-footer .copyright-text {
+    text-align: right;
+  }
+  .footer_container {
+    margin-top: 0em;
+  }
+  .footer_container.socials {
+    margin-top: 0em;
   }
 }
 *,
@@ -219,7 +300,10 @@ footer .top-footer {
 body {
   max-width: 1440px;
   margin: 0 auto;
-  background: hsl(193deg, 100%, 96%);
+}
+
+.wrapper {
+  background-color: hsl(193deg, 100%, 96%);
 }
 
 .card_title,
@@ -234,7 +318,22 @@ body {
 .hero_text {
   font-family: "OpenSans_Regular", sans-serif;
   line-height: 1.5;
-  color: hsl(208deg, 11%, 55%);
+  color: #6c7782;
+  font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
+}
+
+footer {
+  font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
+}
+footer .attribution {
+  line-height: 2.5;
+  font-family: "Poppins_SemiBold", sans-serif;
+}
+footer .attribution a {
+  color: #6c7782;
+}
+footer .attribution a:is(:hover, :focus, :active) {
+  color: #b93989;
 }
 
 .hero_text {

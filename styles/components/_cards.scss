@@ -23,10 +23,21 @@
 }
 
 .card_image-container {
+	grid-row: 1;
 	img {
-		width: 50%;
+		width: 70%;
 	}
 }
+
+// Swap the second boxes image order
+
+// .card.swap-image {
+// 	display: grid;
+
+// 	& > .card_image-container {
+// 		grid-row: 1;
+// 	}
+// }
 
 @media screen and (min-width: 60rem) {
 	.card {
@@ -35,5 +46,30 @@
 		align-items: center;
 		gap: 25px;
 		padding: 2em;
+
+		.card_text-container {
+			&.desktop-text {
+				// border: 2px solid red;
+				grid-column: 1;
+			}
+		}
+
+		//
+
+		// .card .card_image-container.desktop-image {
+		// 	border: 2px solid brown;
+		// 	grid-column: 2;
+		// }
+		//
+		.card_image-container {
+			grid-row: 1;
+			&.desktop-image {
+				// border: 2px solid brown;
+				grid-column: 2;
+			}
+			img {
+				width: 70%;
+			}
+		}
 	}
 }

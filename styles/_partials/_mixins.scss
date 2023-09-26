@@ -12,7 +12,7 @@
 	border: 2px solid transparent;
 	&:is(:hover, :focus, :active) {
 		cursor: pointer;
-		outline: 2px dashed grey;
+		outline: 5px dashed grey;
 	}
 }
 
@@ -29,7 +29,7 @@
 
 	&:is(:hover, :focus, :active) {
 		cursor: pointer;
-		outline: 2px dashed grey;
-		background-color: hsl(322, 100%, 66%, 0.75);
+		outline: 5px dashed grey;
+		background-color: #b93988c7;
 	}
 }

@@ -10,11 +10,27 @@ footer {
 	.copyright-text {
 		font-size: small;
 		font-family: $Open_Sans400;
+		margin: 0 auto;
 	}
 
 	.top-footer {
 		margin: 2.5em 0 1em 0;
 		// border: 2px solid red;
+	}
+
+	.footer-cols.left {
+		display: grid;
+		// gap: 5px;
+	}
+}
+.footer-cols {
+	.footer_container {
+		.list_item {
+			:is(:hover, :focus, :active) {
+				color: $Very_Pale_Cyan;
+				border-bottom: 1px solid $Very_Pale_Cyan;
+			}
+		}
 	}
 }
 
@@ -26,13 +42,44 @@ footer {
 
 	.footer-col_text {
 		line-height: 1.5;
-		// border: 2px solid red;
+	}
+
+	&.location_footer {
+		// border: 2px solid green;
+		display: grid;
+		grid-template-columns: 5% 95%;
+		align-items: start;
+
+		.location_icon {
+			svg {
+				display: block;
+				margin-top: 0.3rem;
+			}
+		}
+	}
+
+	&.email_footer,
+	&.phone_footer {
+		display: grid;
+		grid-template-columns: 5% 95%;
+		align-items: center;
+
+		.email_icon,
+		.phone_icon {
+			// border: 2px solid red;
+			svg {
+				display: block;
+				// border: 2px solid green;
+			}
+		}
 	}
 }
 
 .footer_container {
 	list-style-type: none;
+	margin-top: 2em;
 	.list_item {
+		margin-bottom: 1em;
 		a {
 			text-decoration: none;
 			color: $Very_Pale_Cyan;
@@ -43,21 +90,30 @@ footer {
 		display: flex;
 		gap: 25px;
 		justify-content: center;
+		margin-top: 1.5em;
 		.social_item {
 			svg {
-				border: 2px solid white;
-				border-radius: 50%;
 				fill: $Very_Pale_Cyan;
-				padding: 0.5em;
+				transform: scale(0.75);
+
+				&:is(:hover, :focus, :active) {
+					fill: $Pink;
+					border: none;
+				}
 			}
 		}
 	}
 }
 
+.bottom-footer {
+	margin: 2.5em 0 0 0;
+	text-align: center;
+}
+
 @media screen and (min-width: 60rem) {
 	.middle-footer {
 		display: grid;
-		gap: 30px;
+		gap: 50px;
 		grid-template-columns: repeat(5, 1fr);
 		.footer-cols.left {
 			grid-column: 1/ 3;
@@ -68,7 +124,28 @@ footer {
 		margin: 0;
 	}
 
+	.footer-cols {
+		margin: 0 auto;
+		// Remember this.
+	}
+
+	footer {
+		.footer-cols.left {
+			display: grid;
+			gap: 15px;
+		}
+	}
+
 	.bottom-footer {
-		margin: 1.5em 0;
+		.copyright-text {
+			text-align: right;
+		}
+	}
+
+	.footer_container {
+		margin-top: 0em;
+		&.socials {
+			margin-top: 0em;
+		}
 	}
 }

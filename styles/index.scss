@@ -13,7 +13,11 @@
 body {
 	max-width: 1440px;
 	margin: 0 auto;
-	background: $Very_Pale_Cyan;
+	// background: $Very_Pale_Cyan;
+}
+
+.wrapper {
+	background-color: $Very_Pale_Cyan;
 }
 
 .card_title,
@@ -29,6 +33,24 @@ body {
 	font-family: $Open_Sans400;
 	line-height: 1.5;
 	color: $Grayish_Blue;
+	font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
+}
+
+footer {
+	font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
+
+	.attribution {
+		line-height: 2.5;
+		font-family: $Poppins;
+
+		a {
+			color: $Grayish_Blue;
+
+			&:is(:hover, :focus, :active) {
+				color: $Pink;
+			}
+		}
+	}
 }
 
 .hero_text {

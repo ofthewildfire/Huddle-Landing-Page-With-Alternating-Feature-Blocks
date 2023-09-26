@@ -3,15 +3,20 @@
 .main_header {
 	width: 90%;
 	margin: 0 auto;
+	padding-top: 1em;
 
 	.main_header-top-level {
 		@include heading-flex;
-		margin: 0.5em 0;
+		margin: 0 0 0.5em 0;
 	}
 
 	.top-level-btn {
 		@include default-btn;
-		padding: 0.25em 1em;
+		padding: 0.25em 1.25em;
+		background-color: #fff;
+		color: $Very-Dark-Cyan;
+		font-family: $Poppins;
+		font-size: clamp(0.625rem, 0.5139rem + 0.5556vw, 1rem);
 	}
 
 	.logo > svg {
@@ -27,7 +32,16 @@
 	gap: 25px;
 	padding: $ContainerPadding;
 	background-image: url(/assets/images/bg-hero-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 	.text-container {
+		h1 {
+			color: $Very-Dark-Cyan;
+			font-size: clamp(1.3125rem, 1.1088rem + 1.0185vw, 2rem);
+			line-height: 1.5;
+		}
+
 		> .cta-btn {
 			@include cta-btn;
 		}

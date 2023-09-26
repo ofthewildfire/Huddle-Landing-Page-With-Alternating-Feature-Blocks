@@ -1,9 +1,11 @@
 @use "./typography" as *;
 
-$Pink: hsl(322, 100%, 66%);
+// $Pink: hsl(322, 100%, 66%);
+$Pink: #b93989;
 $Very_Pale_Cyan: hsl(193, 100%, 96%);
 $Very_Dark_Cyan: hsl(192, 100%, 9%);
-$Grayish_Blue: hsl(208, 11%, 55%);
+// $Grayish_Blue: #808d99;
+$Grayish_Blue: #6c7782;
 
 $Poppins: "Poppins_SemiBold", sans-serif;
 $Open_Sans400: "OpenSans_Regular", sans-serif;
