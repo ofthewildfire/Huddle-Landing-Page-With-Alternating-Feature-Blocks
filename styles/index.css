@@ -300,10 +300,7 @@ footer .footer-cols.left {
 body {
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.wrapper {
-  background-color: hsl(193deg, 100%, 96%);
+  background: hsl(193deg, 100%, 96%);
 }
 
 .card_title,
